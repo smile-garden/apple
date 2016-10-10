@@ -1,0 +1,50 @@
+@mixin juzhong{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  margin: auto;
+}
+%juzhong{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  margin: auto;
+}
+@mixin shangxia{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@mixin zuoyou{
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+@mixin fangxing($size){
+  width: $size;
+  height: $size;
+}
+@mixin yuan($size:40px){
+  @include fangxing($size);
+  border-radius: 50%;
+}
+
+$m-size:768px;
+@mixin onm{
+  @media screen and (max-width:$m-size){
+    @content;
+  }
+}
+
+$s-size:480px;
+@mixin ons{
+  @media screen and (max-width:$s-size){
+    @content;
+  }
+}
